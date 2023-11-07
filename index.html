@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Travel.com|Explore the real World</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+body{
+    background: black;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+}
+#navbar::before{
+    content: "";
+    background-color: #5c5c74;
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.5;
+}
+#navbar #logo{
+    margin: 10px 34px;
+}
+#navbar #logo img{
+    height: 59px;
+    margin: 3px 6px;
+} 
+/* navigation bar : list styling */
+/* navigation bar : list styling */
+#navbar {
+    position: relative;
+}
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+/* Updated hover effect for navigation icons */
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden; /* This will hide the initially full-width underline */
+}
+
+/* Add the small underline to navigation icons on hover */
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease; /* Add transition effect for the width property */
+}
+
+#navbar ul li a:hover::before {
+    width: 100%; /* Increase the width to cover the whole text on hover */
+}
+/* Home Section */
+#Home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+#Home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../back.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+} 
+#Home .content{
+    text-align: center;
+    z-index: 10px;
+    
+}
+#Home .content h2{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px white;
+    font-weight: bolder;
+}
+#Home .content h1{
+    font-size: 140px;
+    color: white;
+    font-weight: 160px;
+}
+#Home .content p{
+    text-align: center;
+    color: white;
+    margin: 0px 100px;
+    margin-bottom: 20px;
+} 
+.btn{
+    padding: 6px 20px;
+    border: 2.4px solid#2d4b76;
+    background-color: transparent;
+    text-decoration: none;
+    color:#2d4b76;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor:pointer;
+    font-weight: 2.4px;
+}
+/* book form section */
+.book-form form{
+    margin: -50px 40px;
+ text-align: center;
+ background-color:#1a1a23;
+ padding: 20px 0px;
+ border-radius: 20px;
+}
+.book-form form .inputbox{
+    margin: 20px;
+    color: white;
+    size: 25px;
+}
+.book-form form .inputbox input{
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.book-form form .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+/* About section */
+.About-heading h1{
+    font-size: 80px;
+    color: white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+#About{
+    display: flex;
+    margin: 0px 20px;
+}
+#About img{
+    border-radius: 20px;
+    height: 400px;
+}
+#About #para{
+    background-color: transparent ;
+    color: white;
+    border-radius: 15px;
+    margin: 20px 20px;
+    text-align: center;
+}
+#About #para h2{
+    font-size: 30px;
+    color: aqua;
+    text-align: center;
+    margin: 15px 0px;
+}
+#About #para p{
+    padding: 25px;
+}
+#About #para .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+/* Destination */
+.des-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+.des-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+.des-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+
+#Destination{
+    margin: 34px;
+    display: flex;
+}
+#Destination .box{ 
+    border: 2px solid aqua;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    color: white;
+    background: transparent;
+    margin-bottom: 20px;
+}
+#Destination .box h2{
+    color: aqua;
+    margin: 15px 0px;
+    text-align: center;
+
+}
+
+#Destination .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+#Destination .box a{
+    text-align: center;
+    margin: 10px 70px;
+    color: aqua;
+}
+ /* Gallery section */
+#gallery-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+#gallery-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+#gallery-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+#gallery .image-container{
+    columns: 3 25px;
+    column-gap: 2px;
+    margin: 0px 30px;
+}
+#gallery .image-container .image{
+     margin: 8px;
+     break-inside: avoid;
+}
+#gallery .image-container .image img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+#gallery .image-container .image:hover img {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+/* Bolgs section */
+.blog-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+.blog-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+.blog-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+#blogs{
+    margin: 34px;
+    display: flex;
+}
+#blogs .box-container .box{ 
+    display: flex;
+    border: 2px solid aqua;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: transparent;
+    margin-bottom: 20px;
+    color: white;
+}
+#blogs .box-container .box img{ 
+   height: 300px;
+   margin: auto;
+   display: flex;
+}
+#blogs .box-container .box .random a{
+    margin: 20px 120px;
+    font-size: 30px;
+    color: aqua;
+    display: block;
+} 
+#blogs .box-container .box .random p{
+    text-align: center;
+    margin: 40px;
+    font-size: 20px;
+    color: white;
+} 
+/* contact */
+#contact{
+    background-color:#1a1a23 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 350px;
+}
+#contact h2{
+    color: aqua;
+    size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#contact .box .item{
+    color: white;
+    margin: 5px;
+}
+#contact .box ul li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+#contact .box .email{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#contact .box .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+    /* ... (existing styles) ... */
+
+    /* Media queries for responsiveness */
+
+    /* Small devices (phones, 576px and up) */
+    @media (min-width: 576px) {
+        body {
+            font-size: 14px;
+        }
+
+        #Home {
+            height: 60vh;
+            padding: 3px 20px;
+        }
+
+        #Home .content h2 {
+            font-size: 30px;
+        }
+
+        #Home .content h1 {
+            font-size: 80px;
+        }
+
+        /* ... (add more styles as needed) ... */
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+
+        #Home {
+            height: 70vh;
+            padding: 3px 100px;
+        }
+
+        /* ... (add more styles as needed) ... */
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        body {
+            font-size: 18px;
+        }
+
+        #Home {
+            height: 80vh;
+            padding: 3px 200px;
+        }
+
+        /* ... (add more styles as needed) ... */
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        body {
+            font-size: 20px;
+        }
+
+        /* ... (add more styles as needed) ... */
+    }
+
+
+
+    </style>
+    <!-- ScrollReveal.js library -->
+<script src="https://unpkg.com/scrollreveal@4.1.0/dist/scrollreveal.min.js"></script>
+
+<!-- Swiper.js library -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="travel.com\script.js">
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+            <img src="OIP (1).jpg" alt="Trevel.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="#About">About</a></li>
+            <li class="item"><a href="#Destination">Services</a></li>
+            <li class="item"><a href="#gallery">Gallery</a></li>
+            <li class="item"><a href="#blogs">Blogs & Posts</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <section id="Home"> 
+    <div class="content">
+        <!-- <img src="back.jpg" alt="Nature img" no-repeat center center > -->
+        <h2>Follow us</h2>
+        <h1>To the unknown</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim magnam aperiam ea repudiandae quia aliquid, voluptatem in. At, nulla perferendis? Necessitatibus, laboriosam consequuntur perspiciatis vero voluptatum tempore quia eligendi delectus.</p>
+        <a href="#" class="btn">Book Now</a>
+    </div>
+</section>
+<section class="book-form">
+    <form action="">
+        <span class="inputbox">
+            <span>Where to?</span>
+            <input type="text" placeholder="Destination" value="">
+        </span>
+        <span class="inputbox">
+            <span>When?</span>
+            <input type="date" value="">
+        </span>
+        <span class="inputbox">
+            <span>How many?</span>
+            <input type="number" placeholder="No of travellers" value="">
+        </span>
+        <input type="submit" value="Find Now" class="btn">
+    </form>
+</section>
+<section class="About-heading">
+    <h1>Know more about us!!</h1> 
+   </section>
+   <section id="About">
+               <img src="adult-2693054_640.jpg" alt="">
+           <div id="para">
+               <span>
+                   <h2>Nature's Majesty Awaits You</h2>
+               </span>
+               <p>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis quia voluptatem! Ullam necessitatibus cupiditate pariatur obcaecati deleniti ipsum eius omnis, error minima cum repudiandae mollitia, eum ratione ipsa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam natus temporibus quae esse veniam fugit numquam ex nisi. Hic ipsum illo dolores ipsa, vitae neque repudiandae nisi provident inventore in.
+               </p>
+               <a href="#" class="btn">Read more</a>
+           </div>
+          
+   </section>
+   <!-- Deztination -->
+    <!--Destination -->
+    <section class="des-heading">
+        <h2>Our Destination</h2>
+        <h1>Make Your's Destination</h1>
+    </section>
+    <section id="Destination">
+        <div class="box">
+            <img src="des_img\des_1.jpg" alt="">
+            <h2> Tours & Travel</h2>
+            <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                Lorem ipsum dolor sit, amet adipisicing elit. Et qui, repudiandae similique nam, recusandae quidem ab asperiores ex, aut fugit labore veritatis facere?
+                sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                voluptas beatae facilis labore, omnis sint quae eum.</p>
+                <a href="#" >Read More </i></a>
+        </div>
+        <div class="box">
+            <img src="des_img\des_2.jpg" alt="">
+            <h2>Tours & Travel</h2>
+            <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium a incidunt animi ad, ab dignissimos vero? Unde numquam odit repudiandae perferendis nisi.
+                sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                voluptas beatae facilis.</p>
+                <a href="#" >Read More</i></a>
+        </div>
+        <div class="box">
+            <img src="des_img\des_3.jpg" alt="">
+            <h2>Tours & Travel</h2>
+            <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                Lorem ipsum dolor sit amet adipisicing elit. Necessitatibus provident fugiat aliquam minima at explicabo. Earum eveniet quaerat, sunt molestias nesciunt quas! Quis.
+                sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                voluptas beatae facilis.</p>
+                <a href="#" >Read More </i></a>
+        </div>
+    </section>
+    <!-- gallery section -->
+    <div id="gallery-heading">
+        <h2>Our Gallery</h2>
+       <h1>We Record Memories</h1>
+   </div>
+   <section id="gallery">
+       <div class="image-container">
+           <div class="image">
+               <img src="gallery\g_0.jpg" alt="" height="400px">
+           </div>
+           <div class="image">
+               <img src="gallery\g_1.jpg" alt="" height="400px">
+           </div>
+           <div class="image">
+               <img src="gallery\g_2.jpg" alt="" height="400px">
+           </div>
+           <div class="image">
+               <img src="gallery\g_3.jpg" alt="" height="400px">
+           </div>
+           <div class="image">
+               <img src="gallery\g_4.jpg" alt="" height="400px">
+           </div>
+           <div class="image">
+               <img src="gallery\g_5.jpg" alt="" height="400px">
+           </div>
+       </div>
+   </section>
+   <!-- blogs and posts -->
+   <section class="blog-heading">
+    <h2>Blogs & Posts</h2>
+    <h1>The Untold Stories </h1>
+
+</section>
+<section id="blogs">
+    <div class="box-container">
+        <div class="box">
+            <img src="blogs\blog_1.jpg" alt=" ">
+            <div class="random">
+                <a href="#" class="link">Life is a journey, not a destination</a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus autem adipisci ut ab omnis excepturi tenetur inventore cum iusto doloremque. Voluptatum maiores sed explicabo molestias voluptate magnam et labore Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis impedit deserunt sunt, ex delectus dignissimos voluptates eos sapiente tempore magnam reiciendis aliquam fuga unde nam tempora expedita officia vel.</porro></p>
+        </div>
+        </div>
+    <div class="box">
+            <img src="blogs\blog_2.jpg" alt=" ">
+            <div class="random">
+            <a href="#" class="link">Never Stop Exploring The World</a>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus autem adipisci ut ab omnis excepturi tenetur inventore cum iusto doloremque. Voluptatum maiores sed explicabo molestias voluptate magnam et labore porro Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, inventore cumque consectetur est explicabo blanditiis repellat dolores facilis similique repellendus quos pariatur, quibusdam tenetur, soluta earum sed natus rem maxime?</p>
+    </div>
+    </div>
+    <div class="box">
+            <img src="blogs\blog_3.jpg" alt=" ">
+            <div class="random">
+            <a href="#" class="link">Life is a journey, not a destination</a>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus autem adipisci ut ab omnis excepturi tenetur inventore cum iusto doloremque. Voluptatum maiores sed explicabo molestias voluptate magnam et labore porro Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic culpa eligendi nisi? Labore voluptatum inventore unde, in atque iure officia mollitia perspiciatis, voluptatem dolorem dolore! Adipisci eveniet placeat sed asperiores.</p>
+    </div>  
+</section>
+<!-- footer section -->
+<section id="contact">
+        <img src="OIP (1).jpg" alt="Trevel.com">
+        <div class="box">
+            <h2>Quick Links</h2>
+            <ul>
+                <li class="item"><a href="#Home">Home</a></li>
+                <li class="item"><a href="#About">About</a></li>
+                <li class="item"><a href="#Destination">Services</a></li>
+                <li class="item"><a href="#gallery">Gallery</a></li>
+                <li class="item"><a href="#blogs">Blogs & Posts</a></li>
+                <li class="item"><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Contact Info</h2>
+            <p class="item">Hyderabad, India</p>
+            <p class="item">+919876543210</p>
+            <p class="item">exploretherealworld@gmail.com</p>
+            <p class="item">7:00PM - 10:00PM</p>
+        </div>
+        <div class="box">
+            <h2>Subscribe for the latest updates</h2>
+            <form action="">
+                <input type="email" placeholder="Enter your email" class="email">
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+        </div>
+</section>
+
+
+
+</body>
+</html>

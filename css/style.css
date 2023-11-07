@@ -1,0 +1,338 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+body{
+    background: black;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+}
+#navbar::before{
+    content: "";
+    background-color: #5c5c74;
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.5;
+}
+#navbar #logo{
+    margin: 10px 34px;
+}
+#navbar #logo img{
+    height: 59px;
+    margin: 3px 6px;
+} 
+/* navigation bar : list styling */
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: aqua;
+} 
+/* Home Section */
+#Home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+#Home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../back.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+} 
+#Home .content{
+    text-align: center;
+    z-index: 10px;
+    
+}
+#Home .content h2{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px white;
+    font-weight: bolder;
+}
+#Home .content h1{
+    font-size: 140px;
+    color: white;
+    font-weight: 160px;
+}
+#Home .content p{
+    text-align: center;
+    color: white;
+    margin: 0px 100px;
+    margin-bottom: 20px;
+} 
+.btn{
+    padding: 6px 20px;
+    border: 2.4px solid#2d4b76;
+    background-color: transparent;
+    text-decoration: none;
+    color:#2d4b76;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor:pointer;
+    font-weight: 2.4px;
+}
+/* book form section */
+.book-form form{
+    margin: -50px 40px;
+ text-align: center;
+ background-color:#1a1a23;
+ padding: 20px 0px;
+ border-radius: 20px;
+}
+.book-form form .inputbox{
+    margin: 20px;
+    color: white;
+    size: 25px;
+}
+.book-form form .inputbox input{
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.book-form form .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+/* About section */
+.About-heading h1{
+    font-size: 80px;
+    color: white;
+    font-weight: 100px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+#About{
+    display: flex;
+    margin: 0px 20px;
+}
+#About img{
+    border-radius: 20px;
+    height: 400px;
+}
+#About #para{
+    background-color: transparent ;
+    color: white;
+    border-radius: 15px;
+    margin: 20px 20px;
+    text-align: center;
+}
+#About #para h2{
+    font-size: 30px;
+    color: aqua;
+    text-align: center;
+    margin: 15px 0px;
+}
+#About #para p{
+    padding: 25px;
+}
+#About #para .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+/* Destination */
+.des-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+.des-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+.des-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+
+#Destination{
+    margin: 34px;
+    display: flex;
+}
+#Destination .box{ 
+    border: 2px solid aqua;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    color: white;
+    background: transparent;
+    margin-bottom: 20px;
+}
+#Destination .box h2{
+    color: aqua;
+    margin: 15px 0px;
+    text-align: center;
+
+}
+
+#Destination .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+#Destination .box a{
+    text-align: center;
+    margin: 10px 70px;
+    color: aqua;
+}
+ /* Gallery section */
+#gallery-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+#gallery-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+#gallery-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+#gallery .image-container{
+    columns: 3 25px;
+    column-gap: 2px;
+    margin: 0px 30px;
+}
+#gallery .image-container .image{
+     margin: 8px;
+     break-inside: avoid;
+}
+#gallery .image-container .image img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+/* Bolgs section */
+.blog-heading{
+    margin-top: 35px;
+        text-align: center;
+}
+.blog-heading h2{
+        font-size: 30px;
+        font-weight: bolder;
+        color: aqua;
+    }
+.blog-heading h1{
+        font-size: 50px;
+        font-weight: 160px;
+        margin-bottom: 20px;
+        color: white;
+}
+#blogs{
+    margin: 34px;
+    display: flex;
+}
+#blogs .box-container .box{ 
+    display: flex;
+    border: 2px solid aqua;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: transparent;
+    margin-bottom: 20px;
+    color: white;
+}
+#blogs .box-container .box img{ 
+   height: 300px;
+   margin: auto;
+   display: flex;
+}
+#blogs .box-container .box .random a{
+    margin: 20px 120px;
+    font-size: 30px;
+    color: aqua;
+    display: block;
+} 
+#blogs .box-container .box .random p{
+    text-align: center;
+    margin: 40px;
+    font-size: 20px;
+    color: white;
+} 
+/* contact */
+#contact{
+    background-color:#1a1a23 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 350px;
+}
+#contact h2{
+    color: aqua;
+    size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#contact .box .item{
+    color: white;
+    margin: 5px;
+}
+#contact .box ul li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+#contact .box .email{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#contact .box .btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: aqua;
+    border: 2px solid aqua;
+}
+
